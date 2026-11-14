@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quel PC pour tes études ?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="frame">
+<section class="left" aria-label="Ton profil">
+<div class="top">
+<span class="burger" aria-hidden="true"><i></i><i></i></span>
+<h1><span>
+    owner:Imen<br>QUEL PC</span><span class="t2">POUR TES ÉTUDES ?</span></h1>
+<span class="bar" aria-hidden="true"></span>
+</div>
+<div class="bottom">
+<p class="intro">Dis ce que tu étudies et combien tu peux dépenser : la fiche des caractéristiques s’affiche à droite.</p>
+<div class="f"><label for="nom">Ton prénom (facultatif)</label><input id="nom" type="text" autocomplete="given-name"></div>
+<div class="f"><label for="fil">Ta filière</label><select id="fil"><option value="">Choisis ta filière</option></select></div>
+<fieldset class="f"><legend>Ce que tu feras en plus</legend>
+<div class="checks">
+<label class="chk"><input type="checkbox" id="jeux"><span>Jeux récents</span></label>
+<label class="chk"><input type="checkbox" id="video"><span>Montage vidéo ou photo</span></label>
+<label class="chk"><input type="checkbox" id="vm"><span>Machines virtuelles, gros projets de code</span></label>
+<label class="chk"><input type="checkbox" id="mob"><span>PC transporté tous les jours</span></label>
+</div>
+</fieldset>
+<div class="f"><label for="bud">Ton budget</label>
+<div class="row"><input id="bud" type="number" min="0" step="50" inputmode="numeric" placeholder="ex. 800"><select id="cur" aria-label="Devise"><option value="EUR">€</option><option value="TND">DT</option></select></div></div>
+</div>
+<div class="pager"><b id="cnt" aria-hidden="true">01</b><div><button id="prev" aria-label="Page précédente">◀</button><button id="next" aria-label="Page suivante">▶</button></div></div>
+</section>
+<section class="right" aria-label="Ta fiche">
+<nav aria-label="Sections">
+<button data-v="0">Configuration</button>
+<button data-v="1">Budget</button>
+<button data-v="2">Conseils</button>
+<a href="index2.html">Contact</a> 
+</nav>
+<svg class="laptop" viewBox="0 0 320 230" role="img" aria-label="Illustration d’un ordinateur portable">
+<defs><radialGradient id="g" cx="50%" cy="55%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="160" cy="130" rx="150" ry="100" fill="url(#g)"/>
+<ellipse cx="168" cy="214" rx="110" ry="11" fill="#7a1a7a" opacity=".25"/>
+<path d="M70 120C40 80 60 40 80 20 95 55 100 90 70 120Z" fill="#8277EE"/>
+<path d="M255 125C270 90 300 80 312 70 312 105 290 130 255 125Z" fill="#8F85F2"/>
+<path d="M30 52q6-10 18-4 10-8 18 2 8 2 6 8H30Z" fill="#fff" opacity=".9"/>
+<path d="M214 34q6-9 16-4 9-7 16 2 7 2 5 7h-39Z" fill="#fff" opacity=".9"/>
+<polygon points="42,160 170,108 170,22 42,74" fill="#F6BCEB" opacity=".85"/>
+<polygon points="52,148 160,104 160,34 52,78" fill="#fff" opacity=".25"/>
+<text transform="matrix(1 -.4 0 1 0 0)" x="76" y="134" fill="#fff" font-size="24" font-weight="800" font-family="Exo 2,sans-serif">&lt;/&gt;</text>
+<polygon points="42,160 170,108 292,158 164,212" fill="#8E37B3"/>
+<polygon points="42,160 164,212 164,222 42,170" fill="#5E2380"/>
+<polygon points="164,212 292,158 292,168 164,222" fill="#7A2C9E"/>
+<polygon points="104,165 181,134 236,157 159,189" fill="#D690E8"/>
+<path d="M123 157L178 181M143 150L198 173M162 142L217 165M122 173L199 142M141 181L218 150" stroke="#A85BC8" stroke-width="1.2" fill="none"/>
+<polygon points="176,100 270,138 270,70 176,32" fill="#E37FD6" opacity=".75"/>
+<text transform="matrix(1 .4 0 1 0 0)" x="196" y="22" fill="#fff" font-size="20" font-weight="800" font-family="Exo 2,sans-serif">16 Go</text>
+<circle cx="74" cy="134" r="17" fill="#9A4DD3"/>
+<path d="M66 130q3-4 6 0M78 130q3-4 6 0M66 138q8 8 16 0" stroke="#fff" fill="none" stroke-width="2" stroke-linecap="round"/>
+<circle cx="98" cy="190" r="15" fill="#FF8FA3"/>
+<path d="M90 186q3 3 6 0M102 186q3 3 6 0M94 195q4 3 8 0" stroke="#fff" fill="none" stroke-width="2" stroke-linecap="round"/>
+<circle cx="262" cy="148" r="14" fill="#8A3FC4"/>
+<path d="M262 154c-8-6-9-12-4-14 2-1 4 0 4 2 0-2 2-3 4-2 5 2 4 8-4 14Z" fill="#fff"/>
+</svg>
+<div class="glass" id="out" aria-live="polite"></div>
+<div class="cta">
+<button class="btn solid" id="copy">Copier la fiche</button>
+<button class="btn line" id="reset">Réinitialiser</button>
+</div>
+<div class="dots" role="group" aria-label="Pages"><button data-v="0" aria-label="Configuration"></button><button data-v="1" aria-label="Budget"></button><button data-v="2" aria-label="Conseils"></button></div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
